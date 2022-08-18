@@ -2,9 +2,16 @@ const express = require('express')
 const app = express()
 let port = 3000
 
-app.get('/', (req,res) => {
-  res.send('Hola Mundo!')
-})
+app.use(express.static('public'))
+app.set('view engine', 'ejs')
+
+app.use(require('./routes/index'))
+app.use(require('./routes/albums'))
+
+
+// app.get('/', (req,res) => {
+//   res.send('!Hola Mundo!')
+// })
 
 
 
