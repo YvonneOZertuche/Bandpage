@@ -2,7 +2,9 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/index', (req, res) => {
-  res.send('Index')
+  res.render('index',{
+    album: 'Joshua Tree'
+  })
   
 })
 
