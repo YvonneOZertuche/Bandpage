@@ -9,9 +9,9 @@ app.use(require('./routes/index'))
 app.use(require('./routes/albums'))
 
 
-// app.get('/', (req,res) => {
-//   res.send('!Hola Mundo!')
-// })
+app.get('/', (req,res) => {
+  res.send('!Hola Mundo!')
+})
 
 
 
