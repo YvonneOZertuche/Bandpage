@@ -7,7 +7,7 @@ app.set('view engine', 'ejs')
 
 app.use(require('./routes/index'))
 app.use(require('./routes/albums'))
-
+app.use(require('./routes/users'))
 
 app.get('/', (req,res) => {
   res.send('!Hola Mundo!')
