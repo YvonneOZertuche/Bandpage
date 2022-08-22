@@ -10,14 +10,13 @@ router.get('/albums', (req,res) => {
 })
 })
 
-
-router.get('/albums/:shortname', (req,res)=>{
-  let shortname = req.params.shortname
+router.get('/albums/:albumname', (req,res)=>{
+  let albumname = req.params.albumname
   albums.forEach(albumObj => {
     
   })
-  console.log(shortname)
-  res.send('here is the album')
+  console.log(albumname)
+  res.send(`here is the album ${albumname}`)
 }
 )
 
