@@ -1,13 +1,12 @@
 body{
-  /* background-color: skyblue; */
+  /* background-color: grey; */
   background-image:url("https://wallpaperaccess.com/full/1402510.jpg");
-  background-size: 80%;
+  background-size: 165vh;
   background-repeat: no-repeat;
-  margin:auto;
+  /* margin:auto; */
   /* border-bottom: 100%; */
-  position: absolute;
+  position: absolute; 
 }
 
-ul{
-  list-style: none;
-}
+
+

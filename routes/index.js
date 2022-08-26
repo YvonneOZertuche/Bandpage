@@ -1,21 +1,22 @@
 const express = require('express')
 const router = express.Router()
+
+//import data
 const dataFile = require('../data/data.json')
 
-let albums = dataFile.data
-// console.log(albums)
-
-
-
-
-router.get('/index', (req, res) => {
-  // let shortname = req.params.shortname
-  // albums.forEach(albumObj => {})
-  // console.log(shortname)
-  res.send('here is the album cover')
-
-
+router.get('/', (req, res) => {
+  res.render('index')
 })
 
+
 module.exports = router
+
+
+
+
+
+
+
+
+
 

@@ -1,24 +1,65 @@
-const express = require('express')
+const express = require(`express`)
 const router = express.Router()
-const dataFile = require('../data/data.json')
 
-let albums = dataFile.data
-console.log(albums)
+//import data to this file from the json file
+let dataFile = require(`../data/data.json`)
 
-router.get('/albums', (req,res) => {
-  res.render('albums', {albums: albums
-})
-})
+let albums = dataFile.albums
+// console.log(albums);
 
-router.get('/albums/:albumname', (req,res)=>{
-  let albumname = req.params.albumname
-  albums.forEach(albumObj => {
-    
+router.get(`/album`, (req, res) => {
+  res.render(`albums`, {
+    albums: albums
   })
-  console.log(albumname)
-  res.send(`here is the album ${albumname}`)
-}
-)
+  // console.log(albums)
+})
+
+router.get(`/albums/:shortname`, (req, res) => {
+  let shortname = req.params.shortname
+  let albumName = []
+  let photos = []
+  albums.forEach(albumsObject => {
+    if (albumsObject.shortname == shortname) {
+      albumName.push(albumsObject)
+      photos = albumsObject.artwork
+    }
+    console.log(photos)
+  })
+  res.render('albumPage', {
+    artwork: photos,
+    albumName: albumName
+  })
+ 
+  console.log(albumName)
+})
+
+module.exports = router
+
+
+
+
+
+// const express = require('express')
+// const router = express.Router()
+// const dataFile = require('../data/data.json')
+
+// let albums = dataFile.data
+// // console.log(albums)
+
+// router.get('/albums', (req,res) => {
+//   res.render('albums', {albums: albums
+// })
+// })
+
+// router.get('/albums/:albumname', (req,res)=>{
+//   let albumname = req.params.shortname
+//   albums.forEach(albumObj => {
+    
+//   })
+//   console.log(albumname)
+//   res.send(`here is the album ${shortname}`)
+// }
+// )
 
 
 
