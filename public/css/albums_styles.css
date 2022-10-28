@@ -1,6 +1,10 @@
 
   
 
+.navbar {
+  color:black;
+
+}
 .titles {
   /* display: flex; */
   flex-direction: row;
@@ -8,7 +12,7 @@
   /* align-content:space-between; */
   /* padding:100px; */
   margin-top: 100px;
-  text-align:center;
+  text-align:left;
 }
 
 ul{
@@ -28,7 +32,7 @@ body {
   font-size: 16px;
   background-image: url('https://wallpaperaccess.com/full/1402595.jpg');
   background-repeat: no-repeat;
-  background-size: 180vh;
+  background-size: 200vh;
   color: maroon;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

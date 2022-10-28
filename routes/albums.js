@@ -18,12 +18,16 @@ router.get(`/albums/:shortname`, (req, res) => {
   let shortname = req.params.shortname
   let albumName = []
   let photos = []
+  let playList = []
   albums.forEach(albumsObject => {
     if (albumsObject.shortname == shortname) {
       albumName.push(albumsObject)
       photos = albumsObject.artwork
+      playList = albumsObject.albumSM
+
     }
     console.log(photos)
+    console.log(playList)
   })
   res.render('albumPage', {
     artwork: photos,
